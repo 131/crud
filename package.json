@@ -1,24 +1,41 @@
 {
-
-
   "author": "Francois Leurent <131.js@cloudyks.org>",
   "license": "MIT",
-
-
-
-
   "scripts": {
     "test": "npm run eslint && npm run cover",
     "eslint": "eslint .",
     "checkall": "npm run eslint",
     "mocha": "node node_modules/mocha/bin/_mocha -b",
-    "cover" : "nyc --temp-directory coverage/.nyc_output --reporter text-summary --reporter html --reporter lcov  mocha",
+    "cover": "nyc --temp-directory coverage/.nyc_output --reporter text-summary --reporter html --reporter lcov  mocha",
     "coveralls": "npm install coveralls && node ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info"
   },
   "devDependencies": {
-    "expect.js": "^0.3.1",
-    "nyc": "^13.0.1",
     "eslint-plugin-ivs": "^1.3.0",
-    "mocha": "^3.1.2"
+    "expect.js": "^0.3.1",
+    "mocha": "^3.1.2",
+    "nyc": "^13.0.1"
+  },
+  "name": "crud-fs",
+  "description": "[![Build Status](https://travis-ci.org/131/crud-fs.svg?branch=master)](https://travis-ci.org/131/crud-fs)\r [![Coverage Status](https://coveralls.io/repos/github/131/crud-fs/badge.svg?branch=master)](https://coveralls.io/github/131/crud-fs?branch=master)",
+  "version": "0.1.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/131/crud-fs.git"
+  },
+  "keywords": [
+    "crud",
+    "fs",
+    "http"
+  ],
+  "bugs": {
+    "url": "https://github.com/131/crud-fs/issues"
+  },
+  "homepage": "https://github.com/131/crud-fs#readme",
+  "dependencies": {
+    "nyks": "^6.0.0"
   }
 }
